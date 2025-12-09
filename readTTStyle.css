@@ -1,0 +1,239 @@
+/* Base reset for crisp typography */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #7cce6b, #eeffeb);
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+/* === HEADER & NAVIGATION === */
+header {
+  background-color: #066e0b;
+  color: rgb(255, 252, 252);
+  padding: 20px;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+}
+
+.logo {
+  width: 40px;   /* adjust size as needed */
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-circle {
+  margin: 1rem 0 0 2rem;
+}
+
+.back-circle a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2f4f2f;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-circle a:hover {
+  background-color: #3f6f3f;
+  transform: scale(1.1);
+}
+/* Section layout */
+.tips-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* Hero image */
+.tips-hero {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.tips-hero img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Card */
+.tips-card {
+  background: #e7f6ea; /* soft green tint */
+  border: 1px solid #c9e9cf;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: -24px; /* slight overlap with hero */
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+/* Heading and subtitle */
+.tips-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: 0.2px;
+}
+.tips-subtitle {
+  margin: 0 0 16px;
+  font-weight: 600;
+  color: #0b7a43; /* deeper green */
+}
+
+/* List */
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.tips-list li {
+  background: #ffffff;
+  border: 1px solid #d7eadb;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.tips-list .icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #17a34a; /* green */
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .tips-hero img { height: 220px; }
+  .tips-card { padding: 18px; border-radius: 14px; }
+  .tips-card h2 { font-size: 24px; }
+}
+
+/* Optional subtle entrance animation */
+.tips-card, .tips-hero img {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeUp 500ms ease-out forwards;
+}
+.tips-hero img { animation-delay: 60ms; }
+.tips-card { animation-delay: 140ms; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === FOOTER === */
+.traverse-footer {
+  background-color: #2f4f2f;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+  font-size: 1rem;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+  text-align: right;
+}
+
+.footer-right p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .categories {
+    grid-template-columns: 1fr; /* stack cards */
+  }
+}
+
+img, iframe {
+  max-width: 100%;
+  height: auto;
+}
