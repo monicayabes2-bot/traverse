@@ -128,7 +128,6 @@ nav ul li a {
 
 .recreational-list {
   padding: 2rem;
-  background-color: #f0fff0;
   text-align: center;
 }
 
@@ -176,7 +175,6 @@ nav ul li a {
 
 .church-list {
   padding: 2rem;
-  background-color: #f0fff0;
   text-align: center;
 }
 
@@ -344,4 +342,5 @@ nav ul li a {
   width: 30px;
   margin-left: 0.5rem;
   vertical-align: middle;
+
 }
